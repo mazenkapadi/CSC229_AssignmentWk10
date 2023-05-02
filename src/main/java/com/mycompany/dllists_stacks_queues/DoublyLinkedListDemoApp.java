@@ -36,8 +36,6 @@ public class DoublyLinkedListDemoApp {
       System.out.print("List after removing nodes: ");
       numList.printList();
 
-
-
       int[]  myTestArray = numList.toArray();
       for (int i = 0; i < myTestArray.length; i++){
          System.out.println(myTestArray[i]);
@@ -45,5 +43,18 @@ public class DoublyLinkedListDemoApp {
 
       System.out.println(numList.indexOf(16));
 
+   }
+
+   public static boolean isPrime(int a){
+      if(a<=1)
+         return false;
+      else{
+         for(int i = 2; i <= a/2; i++){
+            if(a%i == 0){
+               return false;
+            }
+         }
+         return true;
+      }
    }
 }

@@ -159,6 +159,29 @@ public class DoublyLinkedList {
       return -1;
    }
 
+   public int sum(int x) {
+      Node node = tail;
+      int sum = 0;
+      while(node != null){
+         sum+=node.data;
+         node=node.previous;
+      }
+      return sum;
+   }
+
+   public int sumOfLastElements(int x){
+      int sum = 0;
+      int count = 0;
+      Node node = tail;
+      while(node != null){
+         count++;
+         if(count <= x){
+            sum+=node.data;
+         }
+         node=node.previous;
+      }
+      return sum;
+   }
 
 
 }
